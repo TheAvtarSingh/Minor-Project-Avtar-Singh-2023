@@ -126,12 +126,7 @@
 						"url": "localhost:8080/hirewheels/v1/bookings"
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "Under Process",
-			"item": [
+				},
 				{
 					"name": "GetAvailableVehicles",
 					"request": {

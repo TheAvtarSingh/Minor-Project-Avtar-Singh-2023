@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.ncu.hireWheels.entities.Booking;
 import org.ncu.hireWheels.entities.Location;
 import org.ncu.hireWheels.entities.Vehicle;
 import org.ncu.hireWheels.entities.VehicleCategory;
@@ -37,48 +38,48 @@ public class VehicleServiceImpl implements VehicleService {
 		}
 
 		@Override
-		public Map<Integer, Vehicle> getAvailableVehicles(VehicleCategory category, Location pickupLocation,
-				Date pickupDate, Date dropoffDate) {
-			// TODO Auto-generated method stub
-			/*
-			 * List<Vehicle> vehicleList = vehicleRepository.findByCategory(category);
-			 * Map<Integer, Vehicle> availableVehicles = new HashMap<>(); for(Vehicle
-			 * vehicle : vehicleList) { if(vehicle.getAvailabilityStatus() ==1) {
-			 * if(isVehicleAvailableAtLocation(vehicle, pickupLocation)) {
-			 * if(isVehicleAvailableForThatTime(vehicle, pickupDate, dropoffDate)) {
-			 * availableVehicles.put(vehicle.getVehicleId(), vehicle); } } } } return
-			 * availableVehicles;
-			 */
-			return null;
+		public Map<Integer, Vehicle> getAvailableVehicles(String pickupLocation, Date pickupDate, Date dropOffDate) {
+			List<Vehicle> vehicleList = vehicleRepository.findAll();
+			Map<Integer, Vehicle> vehicleMap = new HashMap<Integer, Vehicle>();
+			for (Vehicle vehicle : vehicleList) {
+				if(vehicle.getAvailabilityStatus() == 1) {
+					if (isVehicleAvailableAtLocation(vehicle, pickupLocation)) {
+						 
+						  if (isVehicleAvailableForDates(vehicle, pickupDate, dropOffDate)) {
+							  vehicleMap.put(vehicle.getVehicleId(), vehicle);
+		                    }
+						
+					}
+					
+				}
+			}
+			return vehicleMap;
 		}
-		
-		
-		private boolean isVehicleAvailableAtLocation(Vehicle vehicle, Location location) {
-		return vehicle.getVehicleLocation().getLocationId() == location.getLocationId();
-		     
-		}
-		
-		/*
-		 * private boolean isVehicleAvailableForThatTime(Vehicle vehicle, Date
-		 * pickupDate, Date dropoffDate) { List<Booking> bookings =
-		 * bookingRepository.findBookingsForVehicleAndDates(vehicle, pickupDate,
-		 * dropoffDate);
-		 * 
-		 * // Check if there are any conflicting bookings for the vehicle during the
-		 * specified time period for (Booking booking : bookings) { if
-		 * (isDateRangeOverlap(pickupDate, dropoffDate, booking.getPickupDate(),
-		 * booking.getDropoffDate())) { // If there is an overlap in date ranges, the
-		 * vehicle is not available return false; } }
-		 * 
-		 * // If no conflicting bookings were found, the vehicle is available return
-		 * true; }
-		 * 
-		 * // Helper function to check if two date ranges overlap private boolean
-		 * isDateRangeOverlap(Date start1, Date end1, Date start2, Date end2) { return
-		 * start1.before(end2) && start2.before(end1); }
-		 */
 
+		
+		private boolean isVehicleAvailableAtLocation(Vehicle vehicle, String pickupLocation) { 
+	        return vehicle.getVehicleLocation().getLocationName().equals(pickupLocation);
+	    }
+		
+		private boolean isVehicleAvailableForDates(Vehicle vehicle, Date pickupDate, Date dropOffDate) {
+	      
+	        List<Booking> vehicleBookings = vehicle.getVehicle_booking();
+	        for (Booking booking : vehicleBookings) {
+	            Date bookingPickupDate = booking.getPickupDate();
+	            Date bookingDropOffDate = booking.getDropoffDate();
 
+	            if (pickupDate.after(bookingPickupDate) && pickupDate.before(bookingDropOffDate)) {
+	                return false; 
+	            }
+
+	            if (dropOffDate.after(bookingPickupDate) && dropOffDate.before(bookingDropOffDate)) {
+	                return false;  
+	            }
+	        }
+
+	        return true; 
+	    }
+		
 		 
  
 
