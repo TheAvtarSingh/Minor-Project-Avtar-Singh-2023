@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "0999f087-2f00-4d75-bc49-74d74c843bd6",
+		"name": "HireWheels - Spring - Eclipse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30230664"
+	},
+	"item": [
+		{
+			"name": "Working",
+			"item": [
+				{
+					"name": "AddVehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleModel\": \"Audi\",\n    \"vehicleNumber\": \"Audi 345\",\n    \"vehicleSubCategory\": {\n        \"vehicleSubCategoryId\": 1\n    },\n    \"color\": \"Blue\",\n    \"vehicleFuelType\": {\n        \"fuelTypeId\": 1\n    },\n    \"vehicleLocation\": {\n        \"locationId\": 1\n    },\n    \"vehicleImageUrl\": \"https://www.mercedes-amg.com/en/world-of-amg/news/press-information/mercedes-amg-gt-black-series-record-lap.html\",\n    \"availabilityStatus\": 1\n}"
+						},
+						"url": "localhost:8080/hirewheels/v1/vehicles"
+					},
+					"response": []
+				},
+				{
+					"name": "AddVehicleData (Complete)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"vehicleModel\": \"Xi\",\n    \"vehicleNumber\": \"BMW\",\n    \"color\": \"Black\",\n    \"vehicleImageUrl\": \"https://www.bmw.com\",\n    \"availabilityStatus\": 1,\n    \"vehicleLocation\": {\n        \"locationId\": 1,\n        \"locationName\": \"German Motors\",\n        \"address\": \"Delhi\",\n        \"locationCity\": {\n            \"cityId\": 1,\n            \"cityName\": \"Delhi\"\n        },\n        \"pincode\": \"111001\"\n    },\n    \"vehicleFuelType\": {\n        \"fuelTypeId\": 1,\n        \"fuelType\": \"Petrol\"\n    },\n    \"vehicleSubCategory\": {\n        \"vehicleSubCategoryId\": 1,\n        \"vehicleSubCategoryName\": \"Ultra Luxry\",\n        \"pricePerDay\":250.00,\n        \"vehicleSubCategoryVehicleCategory\": {\n            \"vehicleCategoryId\": 1,\n            \"vehicleCategoryName\": \"U-Luxry\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/hirewheels/v1/addvehicle"
+					},
+					"response": []
+				},
+				{
+					"name": "GetVehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/hirewheels/v1/vehicles"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAvailabilityStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"availabilityStatus\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/hirewheels/v1/vehicles/1"
+					},
+					"response": []
+				},
+				{
+					"name": "BookingVehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookingUser\": {\n        \"userId\": 1\n    },\n    \"bookingVehicle\": {\n        \"vehicleId\": 3\n    },\n    \"pickupDate\": \"2020-10-10T12:00:00.000+00:00\",\n    \"dropoffDate\": \"2020-10-18T15:00:00.000+00:00\",\n    \"bookingDate\": \"2020-10-10\",\n    \"bookingLocation\": {\n        \"locationId\": 1\n    },\n    \"amount\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/hirewheels/v1/bookVehicle"
+					},
+					"response": []
+				},
+				{
+					"name": "BookVehicleData (Complete)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"pickupDate\": \"2020-07-17T12:00:00.000+00:00\",\n    \"dropoffDate\": \"2020-07-18T15:00:00.000+00:00\",\n    \"bookingDate\": \"2020-06-29\",\n    \"amount\": 400.0,\n    \"bookingLocation\": {\n        \"locationId\": 2,\n        \"locationName\": \"Indian Motors\",\n        \"address\": \"Ambala,Haryana\",\n        \"locationCity\": {\n            \"cityId\": 2,\n            \"cityName\": \"Delhi\"\n        },\n        \"pincode\": \"110001\"\n    },\n    \"bookingVehicle\": {\n        \"vehicleId\": 2\n    },\n    \"bookingUser\": {\n        \"userId\": 3, \"firstName\": \"Avtar\",\n        \"lastName\": \"Singh\",\n        \"password\": \"secure123\",\n        \"email\": \"joahn.doe@example.com\",\n        \"mobileNo\": \"1224567890\",\n        \"walletMoney\": 500.0,\n        \"userRole\":{\n            \"roleId\" : 1,\n            \"roleName\" : \"Second\"\n\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/hirewheels/v1/bookings"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Under Process",
+			"item": [
+				{
+					"name": "GetAvailableVehicles",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
