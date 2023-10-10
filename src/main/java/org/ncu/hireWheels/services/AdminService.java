@@ -1,5 +1,8 @@
 package org.ncu.hireWheels.services;
 
+import java.util.List;
+
+import org.ncu.hireWheels.entities.User;
 import org.ncu.hireWheels.entities.Vehicle;
 
 
@@ -15,6 +18,12 @@ public interface AdminService  {
 
 //	Get vehicle by id
 	public Vehicle getVehicleById(Integer id); 
+	
+//	Add Multiple Vehicles
+	public List<Vehicle> addMultipleVehicles(List<Vehicle> vehicles);
+	
+//	Add Multiple Users
+	public List<User> addMultipleUsers(List<User> users);
 	 
 	
 	

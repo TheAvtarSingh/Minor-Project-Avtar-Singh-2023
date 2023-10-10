@@ -1,5 +1,8 @@
 package org.ncu.hireWheels.controllers;
 
+import java.util.List;
+
+import org.ncu.hireWheels.entities.User;
 import org.ncu.hireWheels.entities.Vehicle;
 import org.ncu.hireWheels.entities.VehicleUpdateRequest;
 import org.ncu.hireWheels.services.AdminService;
@@ -48,7 +51,7 @@ public class AdminController {
 //	For Adding Mapped Entities Data also - (AddVehicleData (Complete) Request)
 	@PostMapping(value = "/addvehicles", consumes = { "application/json" })
 	public ResponseEntity<?> newVehicle(@RequestBody Vehicle vehicle){
-		Vehicle addedVehicle = adminService.registerVehicle(vehicle);
+		Vehicle addedVehicle = adminService.addVehicle(vehicle);
 		
 		String errorMessage = "Failed to add";
 		
@@ -56,6 +59,34 @@ public class AdminController {
 			return new ResponseEntity<>(addedVehicle,HttpStatus.CREATED);
 		}
 		return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+//	Add Multiple Complete Details
+	@PostMapping(value = "/addmultiplevehicles", consumes = { "application/json" })
+	public ResponseEntity<?> addMultipleVehicles(@RequestBody List<Vehicle> vehicle){
+		
+		List<Vehicle> vehicles = adminService.addMultipleVehicles(vehicle);
+		String errorMessage = "Failed to Add Vehicles";
+		if(vehicles!=null) {
+			return new ResponseEntity<>(vehicles,HttpStatus.CREATED);
+		}else {
+			return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		 
+		
+	}
+	
+//	EXTRA - Add Multiple Users
+	@PostMapping(value = "/addmultipleusers", consumes = { "application/json" })
+	public ResponseEntity<?> addMultipleUsers(@RequestBody List<User> users){
+		List<User> addedUsers = adminService.addMultipleUsers(users);
+		String errorMessage = "Failed to Add Users";
+		if(addedUsers!=null) {
+			return new ResponseEntity<>(addedUsers,HttpStatus.CREATED);
+		}else {
+			return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
+			
+		}
 	}
 	
 

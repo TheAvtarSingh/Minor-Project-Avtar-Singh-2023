@@ -1,14 +1,44 @@
 {
 	"info": {
-		"_postman_id": "0999f087-2f00-4d75-bc49-74d74c843bd6",
+		"_postman_id": "6f04241e-6373-43b3-b16b-754704d175ee",
 		"name": "HireWheels - Spring - Eclipse",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "30230664"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24971711"
 	},
 	"item": [
 		{
-			"name": "Working",
+			"name": "All Request - Follow Order",
 			"item": [
+				{
+					"name": "AddMultipleVehicles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"vehicleModel\": \"Xi\",\n        \"vehicleNumber\": \"BMW\",\n        \"color\": \"Black\",\n        \"vehicleImageUrl\": \"https://www.bmw.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 1,\n            \"locationName\": \"German Motors\",\n            \"address\": \"Delhi\",\n            \"locationCity\": {\n                \"cityId\": 1,\n                \"cityName\": \"Delhi\"\n            },\n            \"pincode\": \"111001\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 1,\n            \"fuelType\": \"Petrol\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 1,\n            \"vehicleSubCategoryName\": \"Ultra Luxury\",\n            \"pricePerDay\": 250.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 1,\n                \"vehicleCategoryName\": \"U-Luxury\"\n            }\n        }\n    },\n    {\n        \"vehicleModel\": \"Model S\",\n        \"vehicleNumber\": \"Tesla\",\n        \"color\": \"Red\",\n        \"vehicleImageUrl\": \"https://www.tesla.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 2,\n            \"locationName\": \"Electric Cars Inc.\",\n            \"address\": \"Los Angeles\",\n            \"locationCity\": {\n                \"cityId\": 2,\n                \"cityName\": \"Los Angeles\"\n            },\n            \"pincode\": \"90001\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 2,\n            \"fuelType\": \"Electric\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 2,\n            \"vehicleSubCategoryName\": \"Electric Luxury\",\n            \"pricePerDay\": 300.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 2,\n                \"vehicleCategoryName\": \"E-Luxury\"\n            }\n        }\n    },\n    {\n        \"vehicleModel\": \"Civic\",\n        \"vehicleNumber\": \"Honda\",\n        \"color\": \"Blue\",\n        \"vehicleImageUrl\": \"https://www.honda.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 3,\n            \"locationName\": \"City Motors\",\n            \"address\": \"New York\",\n            \"locationCity\": {\n                \"cityId\": 3,\n                \"cityName\": \"New York\"\n            },\n            \"pincode\": \"10001\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 3,\n            \"fuelType\": \"Gasoline\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 3,\n            \"vehicleSubCategoryName\": \"Compact\",\n            \"pricePerDay\": 150.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 3,\n                \"vehicleCategoryName\": \"Compact\"\n            }\n        }\n    },\n    {\n        \"vehicleModel\": \"Mustang\",\n        \"vehicleNumber\": \"Ford\",\n        \"color\": \"Yellow\",\n        \"vehicleImageUrl\": \"https://www.ford.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 4,\n            \"locationName\": \"Ford Dealership\",\n            \"address\": \"Chicago\",\n            \"locationCity\": {\n                \"cityId\": 4,\n                \"cityName\": \"Chicago\"\n            },\n            \"pincode\": \"60601\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 4,\n            \"fuelType\": \"Gasoline\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 4,\n            \"vehicleSubCategoryName\": \"Sports\",\n            \"pricePerDay\": 200.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 4,\n                \"vehicleCategoryName\": \"Sports\"\n            }\n        }\n    },\n    {\n        \"vehicleModel\": \"Accord\",\n        \"vehicleNumber\": \"Honda\",\n        \"color\": \"Silver\",\n        \"vehicleImageUrl\": \"https://www.honda.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 5,\n            \"locationName\": \"Honda Dealership\",\n            \"address\": \"Miami\",\n            \"locationCity\": {\n                \"cityId\": 5,\n                \"cityName\": \"Miami\"\n            },\n            \"pincode\": \"33101\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 3,\n            \"fuelType\": \"Gasoline\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 3,\n            \"vehicleSubCategoryName\": \"Compact\",\n            \"pricePerDay\": 160.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 3,\n                \"vehicleCategoryName\": \"Compact\"\n            }\n        }\n    }\n]\n"
+						},
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/addmultiplevehicles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"addmultiplevehicles"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "AddVehicle",
 					"request": {
@@ -24,12 +54,23 @@
 							"mode": "raw",
 							"raw": "{\n    \"vehicleModel\": \"Audi\",\n    \"vehicleNumber\": \"Audi 345\",\n    \"vehicleSubCategory\": {\n        \"vehicleSubCategoryId\": 1\n    },\n    \"color\": \"Blue\",\n    \"vehicleFuelType\": {\n        \"fuelTypeId\": 1\n    },\n    \"vehicleLocation\": {\n        \"locationId\": 1\n    },\n    \"vehicleImageUrl\": \"https://www.mercedes-amg.com/en/world-of-amg/news/press-information/mercedes-amg-gt-black-series-record-lap.html\",\n    \"availabilityStatus\": 1\n}"
 						},
-						"url": "localhost:8080/hirewheels/v1/vehicles"
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/vehicles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"vehicles"
+							]
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "AddVehicleData (Complete)",
+					"name": "AddVehicle - With Mapped Entities Data(Complete)",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -48,7 +89,18 @@
 								}
 							}
 						},
-						"url": "localhost:8080/hirewheels/v1/addvehicle"
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/addvehicles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"addvehicles"
+							]
+						}
 					},
 					"response": []
 				},
@@ -57,7 +109,18 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:8080/hirewheels/v1/vehicles"
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/vehicles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"vehicles"
+							]
+						}
 					},
 					"response": []
 				},
@@ -68,14 +131,63 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"availabilityStatus\":0\n}",
+							"raw": "{\n    \"availabilityStatus\":1\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8080/hirewheels/v1/vehicles/1"
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/vehicles/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"vehicles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMultipleUsers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"userId\": 1,\r\n        \"firstName\": \"Joahn\",\r\n        \"lastName\": \"Doe\",\r\n        \"password\": \"secure123\",\r\n        \"email\": \"joahn.doe@example.com\",\r\n        \"mobileNo\": \"1224567890\",\r\n        \"walletMoney\": 500.0,\r\n        \"userRole\": {\r\n            \"roleId\": 1,\r\n            \"roleName\": \"Owner\"\r\n        }\r\n    },\r\n    {\r\n        \"userId\": 2,\r\n        \"firstName\": \"Alice\",\r\n        \"lastName\": \"Smith\",\r\n        \"password\": \"password123\",\r\n        \"email\": \"alice.smith@example.com\",\r\n        \"mobileNo\": \"9876543210\",\r\n        \"walletMoney\": 750.0,\r\n        \"userRole\": {\r\n            \"roleId\": 2,\r\n            \"roleName\": \"Customer\"\r\n        }\r\n    },\r\n    {\r\n        \"userId\": 3,\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Johnson\",\r\n        \"password\": \"johnson456\",\r\n        \"email\": \"john.johnson@example.com\",\r\n        \"mobileNo\": \"5555555555\",\r\n        \"walletMoney\": 300.0,\r\n        \"userRole\": {\r\n            \"roleId\": 2,\r\n            \"roleName\": \"Customer\"\r\n        }\r\n    },\r\n    {\r\n        \"userId\": 4,\r\n        \"firstName\": \"Emily\",\r\n        \"lastName\": \"Davis\",\r\n        \"password\": \"emily789\",\r\n        \"email\": \"emily.davis@example.com\",\r\n        \"mobileNo\": \"1231231234\",\r\n        \"walletMoney\": 100.0,\r\n        \"userRole\": {\r\n            \"roleId\": 2,\r\n            \"roleName\": \"Customer\"\r\n        }\r\n    },\r\n    {\r\n        \"userId\": 5,\r\n        \"firstName\": \"David\",\r\n        \"lastName\": \"Wilson\",\r\n        \"password\": \"davidpass\",\r\n        \"email\": \"david.wilson@example.com\",\r\n        \"mobileNo\": \"9998887777\",\r\n        \"walletMoney\": 600.0,\r\n        \"userRole\": {\r\n            \"roleId\": 2,\r\n            \"roleName\": \"Customer\"\r\n        }\r\n    }\r\n]\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/addmultipleusers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"addmultipleusers"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -92,14 +204,25 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"bookingUser\": {\n        \"userId\": 1\n    },\n    \"bookingVehicle\": {\n        \"vehicleId\": 3\n    },\n    \"pickupDate\": \"2020-10-10T12:00:00.000+00:00\",\n    \"dropoffDate\": \"2020-10-18T15:00:00.000+00:00\",\n    \"bookingDate\": \"2020-10-10\",\n    \"bookingLocation\": {\n        \"locationId\": 1\n    },\n    \"amount\": 1000\n}",
+							"raw": "{\n    \"bookingUser\": {\n        \"userId\": 1\n    },\n    \"bookingVehicle\": {\n        \"vehicleId\": 1\n    },\n    \"pickupDate\": \"2020-10-10T12:00:00.000+00:00\",\n    \"dropoffDate\": \"2020-10-18T15:00:00.000+00:00\",\n    \"bookingDate\": \"2020-10-10\",\n    \"bookingLocation\": {\n        \"locationId\": 1\n     },\n    \"amount\": 200\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "localhost:8080/hirewheels/v1/bookVehicle"
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"bookings"
+							]
+						}
 					},
 					"response": []
 				},
@@ -123,19 +246,85 @@
 								}
 							}
 						},
-						"url": "localhost:8080/hirewheels/v1/bookings"
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"bookings"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "GetAvailableVehicles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pickupLocation\" : \"City Motors\",\r\n    \"pickupDate\": \"2020-01-10\",\r\n    \"dropOffDate\": \"2020-01-17\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/getAvailableVehicles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"getAvailableVehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"firstName\": \"Joahn\",\r\n    \"lastName\": \"Doe\",\r\n    \"password\": \"secure123\",\r\n    \"email\": \"joahn.doe@example.com\",\r\n    \"mobileNo\": \"1224567890\",\r\n    \"walletMoney\": 500.0,\r\n    \"userRole\": {\r\n        \"roleId\": 1,\r\n        \"roleName\": \"Owner\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/hirewheels/v1/adduser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hirewheels",
+								"v1",
+								"adduser"
+							]
+						}
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "All the Requests are Arranged in a proper workflow. Please Execute them in order.\n\nOrder :\n\n1. Add Multiple Vehicles - Fill Up Tables\n2. AddVehicle (TODO 6.2) - Add Just Vehicle Entity Data not mapped Entities/Table.\n3. AddVehicle - if want to add single vehicle for filling up data in tables.\n4. GetVehicles (TODO 6.1) - get all Vehicles.\n5. UpdateAvailabilityStatus(TODO 6.3) - Update Status by Admin\n6. AddMultipleUsers - This is for filling up User Table for Booking up Vehicle.\n7. BookingVehicle(TODO 6.4) -Book Vehicle\n8. BookVehicleData - This is used when we want to Add Booking Entity data with mapped Entities.\n9. GetAvailableVehicles - Based on Location , Date Pickup and DropOff (Extra)\n10. AddUser - This is for testing of Signup Fnctionality.\n    \n\nMade with **`♥`** By Avtar Singh"
 		}
 	]
 }

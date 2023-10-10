@@ -34,7 +34,7 @@ public class VehicleController {
 	@GetMapping(path = "/getAvailableVehicles")
 	public ResponseEntity<?> getAvailableVehicle(@RequestBody Map<String, String> request) {
 		 try {
-			 String pickUpLocation = request.get("pickUpLocation");
+			 String pickUpLocation = request.get("pickupLocation");
 		        String pickupDateStr = request.get("pickupDate");
 		        String dropOffDateStr = request.get("dropOffDate");
 

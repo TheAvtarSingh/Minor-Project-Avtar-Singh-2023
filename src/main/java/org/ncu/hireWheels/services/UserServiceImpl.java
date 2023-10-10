@@ -3,7 +3,9 @@ package org.ncu.hireWheels.services;
 import org.ncu.hireWheels.entities.User;
 import org.ncu.hireWheels.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserServiceImpl implements UserService {
 	@Autowired
 	UserRepository userRepository;
@@ -47,5 +49,7 @@ public class UserServiceImpl implements UserService {
 	        // Authorised User
 	        return user;
 	}
+	
+	
 
 }

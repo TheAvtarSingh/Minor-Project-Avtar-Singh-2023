@@ -1,11 +1,15 @@
 package org.ncu.hireWheels.services;
 
+import java.util.List;
+
 import org.ncu.hireWheels.entities.FuelType;
 import org.ncu.hireWheels.entities.Location;
+import org.ncu.hireWheels.entities.User;
 import org.ncu.hireWheels.entities.Vehicle;
 import org.ncu.hireWheels.entities.VehicleSubCategory;
 import org.ncu.hireWheels.repository.FuelTypeRepository;
 import org.ncu.hireWheels.repository.LocationRepository;
+import org.ncu.hireWheels.repository.UserRepository;
 import org.ncu.hireWheels.repository.VehicleRepository;
 import org.ncu.hireWheels.repository.VehicleSubCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +23,8 @@ public class AdminServiceImpl implements AdminService {
 	@Autowired
 	VehicleRepository vehicleRepository;
 	
+	
+	
 	@Autowired
 	VehicleSubCategoryRepository vehicleSubCategoryRepository;
 	@Autowired
@@ -26,6 +32,10 @@ public class AdminServiceImpl implements AdminService {
 	@Autowired
 	LocationRepository locationRepository;
 
+//	Extra - Additional to add data maintain Integrity
+	@Autowired
+	UserRepository userRepository;
+	
 	@Override
 	
 	public Vehicle addVehicle(Vehicle vehicle) {
@@ -77,6 +87,28 @@ public class AdminServiceImpl implements AdminService {
 	        return savedVehicle;
 	    }
 		
+	}
+
+	@Override
+	public List<Vehicle> addMultipleVehicles(List<Vehicle> vehicles) {
+		// TODO Auto-generated method stub
+		List<Vehicle> v = vehicleRepository.saveAll(vehicles);
+		if(v.isEmpty() || v==null) {
+			return null;
+		}else {
+			return v;
+		}
+	}
+
+	@Override
+	public List<User> addMultipleUsers(List<User> users) {
+		// TODO Auto-generated method stub
+		List<User> u = userRepository.saveAll(users);
+		if(u.isEmpty() || u==null) {
+			return null;
+		}else {
+			return u;
+		}
 	}
 	
 	
