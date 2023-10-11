@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "6f04241e-6373-43b3-b16b-754704d175ee",
+		"_postman_id": "459fc553-dea7-4599-8843-523650a85f67",
 		"name": "HireWheels - Spring - Eclipse",
+		"description": "Mini Project - MSBA - Avtar Singh - 20csu241",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24971711"
+		"_exporter_id": "30230664"
 	},
 	"item": [
 		{
@@ -37,7 +38,64 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "AddMultipleVehiclesResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"vehicleModel\": \"Xi\",\n        \"vehicleNumber\": \"BMW\",\n        \"color\": \"Black\",\n        \"vehicleImageUrl\": \"https://www.bmw.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 1,\n            \"locationName\": \"German Motors\",\n            \"address\": \"Delhi\",\n            \"locationCity\": {\n                \"cityId\": 1,\n                \"cityName\": \"Delhi\"\n            },\n            \"pincode\": \"111001\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 1,\n            \"fuelType\": \"Petrol\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 1,\n            \"vehicleSubCategoryName\": \"Ultra Luxury\",\n            \"pricePerDay\": 250.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 1,\n                \"vehicleCategoryName\": \"U-Luxury\"\n            }\n        }\n    },\n    {\n        \"vehicleModel\": \"Model S\",\n        \"vehicleNumber\": \"Tesla\",\n        \"color\": \"Red\",\n        \"vehicleImageUrl\": \"https://www.tesla.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 2,\n            \"locationName\": \"Electric Cars Inc.\",\n            \"address\": \"Los Angeles\",\n            \"locationCity\": {\n                \"cityId\": 2,\n                \"cityName\": \"Los Angeles\"\n            },\n            \"pincode\": \"90001\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 2,\n            \"fuelType\": \"Electric\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 2,\n            \"vehicleSubCategoryName\": \"Electric Luxury\",\n            \"pricePerDay\": 300.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 2,\n                \"vehicleCategoryName\": \"E-Luxury\"\n            }\n        }\n    },\n    {\n        \"vehicleModel\": \"Civic\",\n        \"vehicleNumber\": \"Honda\",\n        \"color\": \"Blue\",\n        \"vehicleImageUrl\": \"https://www.honda.com\",\n        \"availabilityStatus\": 1,\n        \"vehicleLocation\": {\n            \"locationId\": 3,\n            \"locationName\": \"City Motors\",\n            \"address\": \"New York\",\n            \"locationCity\": {\n                \"cityId\": 3,\n                \"cityName\": \"New York\"\n            },\n            \"pincode\": \"10001\"\n        },\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 3,\n            \"fuelType\": \"Gasoline\"\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 3,\n            \"vehicleSubCategoryName\": \"Compact\",\n            \"pricePerDay\": 150.00,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 3,\n                \"vehicleCategoryName\": \"Compact\"\n            }\n        }\n    }\n]\n"
+								},
+								"url": {
+									"raw": "localhost:8080/hirewheels/v1/addmultiplevehicles",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"hirewheels",
+										"v1",
+										"addmultiplevehicles"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 05:52:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"vehicleId\": 1,\n        \"vehicleModel\": \"Xi\",\n        \"vehicleNumber\": \"BMW\",\n        \"color\": \"Black\",\n        \"availabilityStatus\": 1,\n        \"vehicleImageUrl\": \"https://www.bmw.com\",\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 1,\n            \"fuelType\": \"Petrol\"\n        },\n        \"vehicleLocation\": {\n            \"locationId\": 1,\n            \"locationName\": \"German Motors\",\n            \"address\": \"Delhi\",\n            \"pincode\": \"111001\",\n            \"locationCity\": {\n                \"cityId\": 1,\n                \"cityName\": \"Delhi\"\n            }\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 1,\n            \"vehicleSubCategoryName\": \"Ultra Luxury\",\n            \"pricePerDay\": 250,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 1,\n                \"vehicleCategoryName\": \"U-Luxury\"\n            }\n        }\n    },\n    {\n        \"vehicleId\": 2,\n        \"vehicleModel\": \"Model S\",\n        \"vehicleNumber\": \"Tesla\",\n        \"color\": \"Red\",\n        \"availabilityStatus\": 1,\n        \"vehicleImageUrl\": \"https://www.tesla.com\",\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 2,\n            \"fuelType\": \"Electric\"\n        },\n        \"vehicleLocation\": {\n            \"locationId\": 2,\n            \"locationName\": \"Electric Cars Inc.\",\n            \"address\": \"Los Angeles\",\n            \"pincode\": \"90001\",\n            \"locationCity\": {\n                \"cityId\": 2,\n                \"cityName\": \"Los Angeles\"\n            }\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 2,\n            \"vehicleSubCategoryName\": \"Electric Luxury\",\n            \"pricePerDay\": 300,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 2,\n                \"vehicleCategoryName\": \"E-Luxury\"\n            }\n        }\n    },\n    {\n        \"vehicleId\": 3,\n        \"vehicleModel\": \"Civic\",\n        \"vehicleNumber\": \"Honda\",\n        \"color\": \"Blue\",\n        \"availabilityStatus\": 1,\n        \"vehicleImageUrl\": \"https://www.honda.com\",\n        \"vehicleFuelType\": {\n            \"fuelTypeId\": 3,\n            \"fuelType\": \"Gasoline\"\n        },\n        \"vehicleLocation\": {\n            \"locationId\": 3,\n            \"locationName\": \"City Motors\",\n            \"address\": \"New York\",\n            \"pincode\": \"10001\",\n            \"locationCity\": {\n                \"cityId\": 3,\n                \"cityName\": \"New York\"\n            }\n        },\n        \"vehicleSubCategory\": {\n            \"vehicleSubCategoryId\": 3,\n            \"vehicleSubCategoryName\": \"Compact\",\n            \"pricePerDay\": 150,\n            \"vehicleSubCategoryVehicleCategory\": {\n                \"vehicleCategoryId\": 3,\n                \"vehicleCategoryName\": \"Compact\"\n            }\n        }\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "AddVehicle",
@@ -70,7 +128,7 @@
 					"response": []
 				},
 				{
-					"name": "AddVehicle - With Mapped Entities Data(Complete)",
+					"name": "(Optional)AddVehicle - With Mapped Entities Data(Complete)",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -227,7 +285,7 @@
 					"response": []
 				},
 				{
-					"name": "BookVehicleData (Complete)",
+					"name": "(Optional) BookVehicleData (Complete)",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -294,7 +352,7 @@
 					"response": []
 				},
 				{
-					"name": "AddUser",
+					"name": "(Optional)AddUser",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -324,7 +382,7 @@
 					"response": []
 				}
 			],
-			"description": "All the Requests are Arranged in a proper workflow. Please Execute them in order.\n\nOrder :\n\n1. Add Multiple Vehicles - Fill Up Tables\n2. AddVehicle (TODO 6.2) - Add Just Vehicle Entity Data not mapped Entities/Table.\n3. AddVehicle - if want to add single vehicle for filling up data in tables.\n4. GetVehicles (TODO 6.1) - get all Vehicles.\n5. UpdateAvailabilityStatus(TODO 6.3) - Update Status by Admin\n6. AddMultipleUsers - This is for filling up User Table for Booking up Vehicle.\n7. BookingVehicle(TODO 6.4) -Book Vehicle\n8. BookVehicleData - This is used when we want to Add Booking Entity data with mapped Entities.\n9. GetAvailableVehicles - Based on Location , Date Pickup and DropOff (Extra)\n10. AddUser - This is for testing of Signup Fnctionality.\n    \n\nMade with **`♥`** By Avtar Singh"
+			"description": "All the Requests are Arranged in a proper workflow. Please Execute them in order.\n\nOrder :\n\n1. Add Multiple Vehicles - Fill Up Tables\n2. AddVehicle (TODO 6.2) - Add Just Vehicle Entity Data not mapped Entities/Table.\n3. (Optional) AddVehicle - if want to add single vehicle for filling up data in tables.\n    \n4. GetVehicles (TODO 6.1) - get all Vehicles.\n5. UpdateAvailabilityStatus(TODO 6.3) - Update Status by Admin\n6. AddMultipleUsers - This is for filling up User Table for Booking up Vehicle.\n7. BookingVehicle(TODO 6.4) -Book Vehicle\n8. (Optional)BookVehicleData - This is used when we want to Add Booking Entity data with mapped Entities.\n    \n9. GetAvailableVehicles - Based on Location , Date Pickup and DropOff (Extra)\n10. (Optional) AddUser - This is for testing of Signup Fnctionality.\n    \n\nMade with **`♥`** By Avtar Singh"
 		}
 	]
 }
