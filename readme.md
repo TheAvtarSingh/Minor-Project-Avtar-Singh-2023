@@ -9,18 +9,18 @@ Please find the Proper Documentation of Project [Here](https://drive.google.com/
 
 # CheckMarks 
 
-- [x] **TODO 1.1:** Spring Boot Project Creation
-- [x] **TODO 5.1:** [Creation of 'UserService: createUser'](src/main/java/org/ncu/hireWheels/services/UserServiceImpl.java)
-- [x] **TODO 5.2:** [Creation of 'UserService: getUser'](src/main/java/org/ncu/hireWheels/services/UserServiceImpl.java)
-- [x] **TODO 5.3:** [Creation of 'AdminService: registerVehicle'](src/main/java/org/ncu/hireWheels/services/AdminServiceImpl.java)
-- [x] **TODO 5.4:** [Creation of 'AdminService: changeAvailability'](src/main/java/org/ncu/hireWheels/services/AdminServiceImpl.java)
-- [x] **TODO 5.5:** [Creation of 'BookingService: addBooking'](src/main/java/org/ncu/hireWheels/services/BookingServiceImpl.java)
-- [x] **TODO 5.6:** [Creation of 'VehicleService: getAllVehicles'](src/main/java/org/ncu/hireWheels/services/VehicleServiceImpl.java)
-- [x] **TODO 5.7:** [Creation of 'VehicleService: getAvailableVehicles'](src/main/java/org/ncu/hireWheels/services/VehicleServiceImpl.java)
-- [x] **TODO 6.1:** [(TODO 6.1)](#4-get-vehicles-todo-61)
-- [x] **TODO 6.2:** [(TODO 6.2)](#2-add-vehicle-todo-62)
-- [x] **TODO 6.3:** [(TODO 6.3)](#5-update-availability-status-todo-63)
-- [x] **TODO 6.4:** [(TODO 6.4)](#7-booking-vehicle-todo-64)
+- [x] **TODO 1.1 ✅ :** Spring Boot Project Creation
+- [x] **TODO 5.1 ✅ :** [Creation of 'UserService: createUser'](src/main/java/org/ncu/hireWheels/services/UserServiceImpl.java)
+- [x] **TODO 5.2 ✅ :** [Creation of 'UserService: getUser'](src/main/java/org/ncu/hireWheels/services/UserServiceImpl.java)
+- [x] **TODO 5.3 ✅ :** [Creation of 'AdminService: registerVehicle'](src/main/java/org/ncu/hireWheels/services/AdminServiceImpl.java)
+- [x] **TODO 5.4 ✅ :** [Creation of 'AdminService: changeAvailability'](src/main/java/org/ncu/hireWheels/services/AdminServiceImpl.java)
+- [x] **TODO 5.5 ✅ :** [Creation of 'BookingService: addBooking'](src/main/java/org/ncu/hireWheels/services/BookingServiceImpl.java)
+- [x] **TODO 5.6 ✅ :** [Creation of 'VehicleService: getAllVehicles'](src/main/java/org/ncu/hireWheels/services/VehicleServiceImpl.java)
+- [x] **TODO 5.7 ✅ :** [Creation of 'VehicleService: getAvailableVehicles'](src/main/java/org/ncu/hireWheels/services/VehicleServiceImpl.java)
+- [x] **TODO 6.1 ✅ :** [(TODO 6.1)](#4-get-vehicles-todo-61)
+- [x] **TODO 6.2 ✅ :** [(TODO 6.2)](#2-add-vehicle-todo-62)
+- [x] **TODO 6.3 ✅ :** [(TODO 6.3)](#5-update-availability-status-todo-63)
+- [x] **TODO 6.4 ✅ :** [(TODO 6.4)](#7-booking-vehicle-todo-64)
 
 
 ## Table of Contents
