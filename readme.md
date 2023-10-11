@@ -1,4 +1,4 @@
-# Awesome Spring Boot Data JPA Backend
+# Minor Project - Spring Data JPA - Avtar Singh - 20csu241
 
 Welcome to the documentation for your minor project backend built using Spring Boot Data JPA. This backend application provides a set of APIs to manage vehicles, users, and bookings. Follow this guide to understand the workflow and execute the requests in the specified order.
 
