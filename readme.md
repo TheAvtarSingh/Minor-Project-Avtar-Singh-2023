@@ -6,6 +6,7 @@ Welcome to the documentation for minor project backend built using Spring Boot D
 
 # Problem Statement
 Please find the Proper Documentation of Project [Here](https://drive.google.com/drive/folders/1toPDmiMAkr35fd8znPVVUFFAAzGTU3OA?usp=sharing)
+If Video is Not Playing Please find all the Videos [Here](https://drive.google.com/drive/folders/1toPDmiMAkr35fd8znPVVUFFAAzGTU3OA?usp=sharing)
 
 # CheckMarks 
 
