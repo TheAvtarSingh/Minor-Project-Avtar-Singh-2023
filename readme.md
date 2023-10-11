@@ -37,6 +37,12 @@ Follow this workflow to execute the requests in order.
 - **Endpoint:** `/add-multiple-vehicles`
 - **Method:** POST
 
+
+
+https://github.com/TheAvtarSingh/Minor-Project-Avtar-Singh-2023/assets/88712571/894674c1-3e10-47b7-9044-082eacd5d879
+
+
+
 ### 2. Add Vehicle (TODO 6.2)
 - **Description:** Add data for a single vehicle. This request does not map entities/tables.
 - **Endpoint:** `/add-vehicle`
@@ -83,6 +89,6 @@ Follow this workflow to execute the requests in order.
 - **Method:** POST
 
 ## Author
-This project is made with ♥ by Avtar Singh. If you have any questions or need assistance, please feel free to contact the author.
+This project is made with ♥ by Avtar Singh (singha2k2@gmail.com) . If you have any questions or need assistance, please feel free to Me.
 
 Thank you for using this Spring Boot Data JPA Backend for your project! Enjoy coding and have a great experience!
